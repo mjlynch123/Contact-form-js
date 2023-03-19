@@ -1,3 +1,7 @@
+var fullName = document.getElementById("full-name");
+var email = document.getElementById("email");
+var message = document.getElementById("message");
+
 function SubForm (event){
     event.preventDefault();
     // Get the phone number input value and remove any non-digit characters
@@ -21,6 +25,10 @@ function SubForm (event){
                 alert("There was an error :(")
             }
         });
+        fullName.value = "";
+        email.value = "";
+        message.value = "";
+        document.getElementById('phone-number').value = "";
     }
     else {
         alert("Please Enter a value.");

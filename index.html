@@ -13,10 +13,11 @@
     <section id="contact-form">
       <form id="myForm">
         <section id="left">
-          <input type="text" name="Name" placeholder="Full Name" required />
+          <input type="text" name="Name" placeholder="Full Name" id="full-name" required />
           <input
             type="email"
             name="Email"
+            id="email"
             placeholder="Email Address"
             required
           />
@@ -33,6 +34,7 @@
           <textarea
             name="Message"
             placeholder="Enter message here"
+            id="message"
             style="resize: none"
           ></textarea>
           <button onclick="SubForm(event)">Submit</button>
