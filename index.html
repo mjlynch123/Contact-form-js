@@ -1,13 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>Contact Form</title>
-</head>
-<body>
+<html>
+  <head>
+    <title>Save Web Form Data to Spreadsheets</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.js"
+      integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <section id="contact-form">
+      <form id="myForm">
+        <section id="left">
+          <input type="text" name="Name" placeholder="Full Name" required />
+          <input
+            type="email"
+            name="Email"
+            placeholder="Email Address"
+            required
+          />
+          <input
+            type="text"
+            name="Phone Number"
+            id="phone-number"
+            placeholder="Phone Number"
+            required
+          />
+        </section>
+
+        <section id="right">
+          <textarea
+            name="Message"
+            placeholder="Enter message here"
+            style="resize: none"
+          ></textarea>
+          <button onclick="SubForm(event)">Submit</button>
+        </section>
+      </form>
+    </section>
+
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
