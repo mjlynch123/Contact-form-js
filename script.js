@@ -1,6 +1,14 @@
 var fullName = document.getElementById("full-name");
 var email = document.getElementById("email");
 var message = document.getElementById("message");
+var today = document.getElementById("currentDay");
+
+var currentDate = new Date();
+
+// Get the month, day, and year
+var month = ("0" + (currentDate.getMonth() + 1)).slice(-2)
+var day = ("0" + currentDate.getDate()).slice(-2);
+var year = currentDate.getFullYear();
 
 function SubForm(event) {
   event.preventDefault();
@@ -20,6 +28,10 @@ function SubForm(event) {
   if (phoneInput !== "") {
     // Set the phone number input value to the formatted phone number
     document.getElementById("phone-number").value = formattedPhone;
+    
+    var now = year + "-" + month + "-" + day;
+    document.getElementById("currentDay").value = now;
+
     $.ajax({
       url: "https://api.apispreadsheets.com/data/sVhQOLQGvbj5bcaI/",
       type: "post",
@@ -35,6 +47,7 @@ function SubForm(event) {
     email.value = "";
     message.value = "";
     document.getElementById("phone-number").value = "";
+    document.getElementById("currentDay").value = "";
   } else {
     alert("Please Enter a value.");
   }
