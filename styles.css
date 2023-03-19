@@ -1,5 +1,6 @@
 body {
   width: 100vw;
+  background-color: aqua;
 }
 
 #contact-form {
@@ -16,11 +17,13 @@ textarea,
 button {
   margin: 5px;
   border-radius: 5px;
-  border-width: .5px;
+  border-width: 0.5px;
 }
 
-input[type="text"], input[type="email"], input[type="number"] {
-    padding: 7px;
+input[type="text"],
+input[type="email"],
+input[type="number"] {
+  padding: 7px;
 }
 
 #left,
@@ -59,5 +62,5 @@ input[type="text"], input[type="email"], input[type="number"] {
 }
 
 textarea::placeholder {
-    padding: 5px;
+  padding: 5px;
 }
